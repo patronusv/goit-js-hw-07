@@ -1,9 +1,9 @@
 'use strict';
 const ingredients = ['Картошка', 'Грибы', 'Чеснок', 'Помидоры', 'Зелень', 'Приправы'];
 
-const listRef = ingredients.forEach((item, index) => {
-  item = document.createElement('li');
-  item.textContent = ingredients[index];
+const listRef = ingredients.forEach(item => {
+  const listItemRef = document.createElement('li');
+  listItemRef.textContent = item;
   const list = document.querySelector('#ingredients');
-  list.appendChild(item);
+  list.appendChild(listItemRef);
 });
