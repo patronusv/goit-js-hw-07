@@ -1,0 +1,4 @@
+#gallery {
+  display: flex;
+  list-style: none;
+}
