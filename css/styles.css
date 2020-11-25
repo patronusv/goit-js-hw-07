@@ -7,9 +7,12 @@
 }
 
 #validation-input.valid {
-  border-color: #4caf50;
+  border-color: rgb(76, 175, 80);
 }
 
 #validation-input.invalid {
   border-color: #f44336;
+}
+body {
+  background-color: rgb(173, 173, 173);
 }
