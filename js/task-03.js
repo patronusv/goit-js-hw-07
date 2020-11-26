@@ -14,7 +14,9 @@ const images = [
   },
 ];
 const list = document.querySelector('#gallery');
-
+const fragment = document.createDocumentFragment();
+let string = '';
 const listRef = images.forEach(({ url, alt }) => {
-  list.insertAdjacentHTML('beforeend', `<li><img src = "${url}" alt = "${alt}" height = "250"></li>`);
+  string += `<li><img src = "${url}" alt = "${alt}" height = "250"></li>`;
 });
+list.insertAdjacentHTML('beforeend', string);
