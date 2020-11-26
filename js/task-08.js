@@ -13,15 +13,16 @@ const randomRGB = () => {
 const createBoxes = () => {
   const boxNumber = Number(inputRef.value);
   let boxSize = 30;
+  let string = '';
   for (let i = 0; i < boxNumber; i += 1) {
     const boxColor = randomRGB();
-    boxesRef.insertAdjacentHTML('beforeend', `<div style="width: ${boxSize}px;height: ${boxSize}px; background-color: ${boxColor}"></div>`);
+    string += `<div style="width: ${boxSize}px;height: ${boxSize}px; background-color: ${boxColor}"></div>`;
     boxSize += 10;
   }
+  boxesRef.insertAdjacentHTML('beforeend', string);
 };
 const destroyBoxes = () => {
-  const boxesToDestroy = boxesRef.querySelectorAll('div');
-  boxesToDestroy.forEach(item => boxesRef.removeChild(item));
+  boxesRef.innerHTML = '';
 };
 btnRender.addEventListener('click', createBoxes);
 btnDestroy.addEventListener('click', destroyBoxes);
