@@ -14,7 +14,6 @@ const images = [
   },
 ];
 const list = document.querySelector('#gallery');
-const fragment = document.createDocumentFragment();
 let string = '';
 const listRef = images.forEach(({ url, alt }) => {
   string += `<li><img src = "${url}" alt = "${alt}" height = "250"></li>`;
